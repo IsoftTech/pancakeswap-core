@@ -12,16 +12,6 @@ async function main() {
 
   await factory.deployed();
   console.log("factory deployed to:", factory.address.toString());
-
-  const ROUTER_01 = await hre.ethers.getContractFactory("PancakeRouter01");
-  const router01 = await ROUTER_01.deploy(factory.address, wbnb);
-  await router01.deployed();
-  console.log("router_01 deployed to:", router01.address.toString());
-
-  const ROUTER_MAIN = await hre.ethers.getContractFactory("PancakeRouter");
-  const routerMain = await ROUTER_MAIN.deploy(factory.address, wbnb);
-  await routerMain.deployed();
-  console.log("router_main deployed to:", routerMain.address.toString());
 }
 
 // We recommend this pattern to be able to use async/await everywhere
