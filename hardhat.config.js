@@ -30,7 +30,7 @@ module.exports = {
     bsctest: {
         url: "https://data-seed-prebsc-1-s1.binance.org:8545",
         accounts: [process.env.PRIV_KEY],
-        gasPrice: 20000000000,
+        gasPrice: 20000000000, 
         saveDeployments: true,
         blockGasLimit: 1000000
     },
